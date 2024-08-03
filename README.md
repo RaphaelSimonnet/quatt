@@ -24,3 +24,33 @@ have suggestions for improvements, please don&#39;t hesitate to report them.
 Good luck with your assignment, and if you have any questions or need
 clarification on any aspect of it, don&#39;t hesitate to reach out.
 Looking forward to seeing your work!
+
+### How to test:
+#### Locally in the console
+- Clone the project 
+> git clone git@github.com:RaphaelSimonnet/quatt.git
+- Run 
+> npm install
+- Run the tests in the console 
+> npx cypress run
+- Check the console result
+
+#### Locally with UI
+- Clone the project
+> git clone git@github.com:RaphaelSimonnet/quatt.git
+- Run 
+> npm install
+- Run the test 
+> npx cypress open
+- Execute the E2E with any browser of your choice
+- Select the test you want to run and observe the results
+
+#### in the CI
+- Clone the project
+> git clone git@github.com:RaphaelSimonnet/quatt.git
+- Create a branch
+> git branch -b testQuatt
+- Do a minor change (adding a console log for exemple)
+- Push your branch and create a pull request
+- Check the CI test results
+
