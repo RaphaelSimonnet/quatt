@@ -6,6 +6,7 @@ let generateEmail = () => {
 }
 
 it ('Create User with POST Method', () => {
+    cy.log('test');
     const xemail = generateEmail()
     cy.fixture('userPOST').then((payload) => {
         payload.email = xemail
