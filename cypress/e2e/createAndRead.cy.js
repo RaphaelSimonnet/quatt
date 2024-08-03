@@ -1,11 +1,11 @@
-// Generation of a random emil to be used later
+// Generation of a random email to be used later
 let generateEmail = () => {
     const randomString = Math.random().toString(36).substring(2,10)
     const email = randomString+"@quatt.nl"
     return email
 }
 
-it ('POST', () => {
+it ('Create User with POST Method', () => {
     const xemail = generateEmail()
     cy.fixture('userPOST').then((payload) => {
         payload.email = xemail

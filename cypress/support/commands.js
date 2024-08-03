@@ -1,25 +1,38 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+// const faker = require('faker');
+// Cypress.Commands.add('generateRandomEmail', () => {
+//   return faker.internet.email();
+// });
+
+
+// Generation of a random emil to be used later
+let generateEmail = () => {
+    const randomString = Math.random().toString(36).substring(2,10)
+    const email = randomString+"@quatt.nl"
+    return email
+}
+
+Cypress.Commands.add('CreateUser', () => {
+    const xemail = generateEmail();
+    cy.fixture('userPOST').then((payload) => {
+        payload.email = xemail
+        cy.log("EMAIL"+xemail)
+        cy.request({
+            method: "POST",
+            url:"./public/v2/users",
+            headers :
+                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
+    
+                },
+            body: payload
+    
+        }).then((res) => {
+            expect(res.status).to.eq(201);
+            expect(res.body).to.have.property("name", "Raphael Simonnet");
+            expect(res.body).to.have.property("gender", "male");
+            expect(res.body).to.have.property("status", "active");
+            expect(res.body.id).to.not.be.null;
+
+
+        })
+    })
+})
