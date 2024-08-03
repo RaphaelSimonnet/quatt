@@ -1,4 +1,4 @@
-name: Cypress Tests on Chrome
+name: Cypress Tests on Chrome and Electron
 
 on: push
 
@@ -14,5 +14,4 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npx cypress run
-          browser: chrome
           wait-on: https://gorest.co.in/

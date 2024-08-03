@@ -7,7 +7,7 @@ module.exports = defineConfig({
     },
     baseUrl: 'https://gorest.co.in/',
     env: {
-      TOKEN: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
+      TOKEN: 'Bearer f37ac60ef4ea775019edbb17ddf27ebc4a6462fb759f406396679d2b1bdb5723',
     },
   },
 });
