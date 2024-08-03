@@ -12,6 +12,10 @@ jobs:
       - name: Cypress install
         uses: cypress-io/github-action@v6
 
+  cypress-run:
+    runs-on: ubuntu-22.04
+    needs: install
+    steps:
       - name: Cypress run
         uses: cypress-io/github-action@v6
         with: 
