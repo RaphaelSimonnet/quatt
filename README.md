@@ -31,7 +31,7 @@ Looking forward to seeing your work!
 - Clone the project `git clone git@github.com:RaphaelSimonnet/quatt.git`
 - Run `npm install`
 - Run the tests in the console `npx cypress run`
-- Check the console result
+- Check the console results
 
 #### Locally with UI
 - Clone the project `git clone git@github.com:RaphaelSimonnet/quatt.git`
