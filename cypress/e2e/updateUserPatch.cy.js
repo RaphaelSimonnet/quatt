@@ -14,9 +14,7 @@ it ('Update user via PATCH method', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -40,9 +38,7 @@ it ('Update user via PATCH with missing name', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -65,9 +61,7 @@ it ('Update user via PATCH with missing email', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -92,9 +86,7 @@ it ('Update user via PATCH with missing gender', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -119,9 +111,7 @@ it ('Update user via PATCH with missing status', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -145,9 +135,7 @@ it ('Error flow: Update user via PATCH with invalid ID', () => {
                 method: "PATCH",
                 url: './public/v2/users/'+"quatt",
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -166,9 +154,7 @@ it ('Error Flow Update user via PATCH method with invalid email, invalid gender 
                 method: "PATCH",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {

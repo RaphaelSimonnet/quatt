@@ -14,9 +14,7 @@ it ('Update user via PUT method', () => {
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -42,9 +40,7 @@ it ('Update user via PUT with missing name', () => {
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -67,9 +63,7 @@ it ('Update user via PUT with missing email', () => {
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -94,9 +88,7 @@ it ('Update user via PUT with missing gender', () => {
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -121,9 +113,7 @@ it ('Error flow: Update user via PUT with missing status', () => {
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {
@@ -147,9 +137,7 @@ it ('Error flow: Update user via PUT with invalid ID', () => {
             method: "PATCH",
             url: './public/v2/users/'+"quatt",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
 
     }).then((res) => {
@@ -168,9 +156,7 @@ it ('Error Flow Update user via PUT method with invalid email, invalid gender an
                 method: "PUT",
                 url: './public/v2/users/'+id,
                 headers :
-                    {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-        
-                    },
+                    {Authorization: Cypress.env('TOKEN')},
                 body: payload
 
         }).then((res) => {

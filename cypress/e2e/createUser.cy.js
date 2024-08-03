@@ -14,9 +14,7 @@ it ('Create User with POST Method', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{
@@ -40,9 +38,7 @@ it ('Error flows: name missing', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{
@@ -63,9 +59,7 @@ it ('Error flows: email missing', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{
@@ -86,9 +80,7 @@ it ('Error flows: gender missing', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{
@@ -109,9 +101,7 @@ it ('Error flows: email missing', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{
@@ -132,9 +122,7 @@ it ('Error flows: invalid user', () => {
             method: "POST",
             url:"./public/v2/users",
             headers :
-                {Authorization: 'Bearer 0569f0d940174bc34a169081b7bb122b537b72d2e2dc0c35fc2a249bcf59d137',
-    
-                },
+                {Authorization: Cypress.env('TOKEN')},
             body: payload
     
         }).then((res)=>{

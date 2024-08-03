@@ -1,18 +1,8 @@
-// const faker = require('faker');
-// Cypress.Commands.add('generateRandomEmail', () => {
-//   return faker.internet.email();
-// });
-
-
-// Generation of a random emil to be used later
-let generateEmail = () => {
-    const randomString = Math.random().toString(36).substring(2,10)
-    const email = randomString+"@quatt.nl"
-    return email
-}
+const { fakerDE: faker } = require('@faker-js/faker');
 
 Cypress.Commands.add('CreateUser', () => {
-    const xemail = generateEmail();
+    const randomString = Math.random().toString(36).substring(2,10)
+    const xemail = randomString+"@quatt.nl"
     cy.fixture('userPOST').then((payload) => {
         payload.email = xemail
         cy.log("EMAIL"+xemail)
