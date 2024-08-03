@@ -12,4 +12,5 @@ jobs:
         uses: cypress-io/github-action@v6
         with:
           start: npx cypress run
+          browser: chrome
           wait-on: https://gorest.co.in/
