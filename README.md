@@ -17,7 +17,8 @@ use Jest and Supertest, please don&#39;t use Postman for this).
 * How you test APIs  
 * Good structuring of tests for reusability and maintainability   
 * Provide clear instructions on how to run the tests in README   
-* GitHub CI/CD is a plus  
+* GitHub CI/CD is a plus
+
 Once you have completed the assignment, kindly provide us with a link to
 your publicly accessible GitHub repository. If you come across any bugs or
 have suggestions for improvements, please don&#39;t hesitate to report them.
