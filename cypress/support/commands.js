@@ -1,5 +1,3 @@
-const { fakerDE: faker } = require('@faker-js/faker');
-
 Cypress.Commands.add('CreateUser', () => {
     const randomString = Math.random().toString(36).substring(2,10)
     const xemail = randomString+"@quatt.nl"
