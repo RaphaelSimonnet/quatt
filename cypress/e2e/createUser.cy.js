@@ -23,7 +23,6 @@ it ('Create User with POST Method', () => {
             expect(res.body).to.have.property("gender", "male");
             expect(res.body).to.have.property("status", "active");
             expect(res.body.id).to.not.be.null;
-
         })
     })
 })
